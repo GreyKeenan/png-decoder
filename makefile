@@ -98,7 +98,7 @@ runsuite: a.out $(suite)
 	cd $(suite) && \
 	for p in *.png; do \
 		if !($$rundir/$(out) "$$p" > /dev/null 2>&1); then\
-			echo "1: \033[0;31m$$p\033[0;0m"; \
+			echo -e "1: \033[0;31m$$p\033[0;0m"; \
 		else \
 			echo "0: $$p"; \
 		fi \
